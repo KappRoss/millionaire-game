@@ -1,0 +1,27 @@
+.mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.handImageBlock{
+    background: url("../../images/hand.svg") no-repeat center;
+    height: 367px;
+    width: 100%;
+    max-width: 624px;
+    min-width: 300px;
+}
+
+.infoBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 624px;
+}
