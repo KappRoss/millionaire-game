@@ -10,7 +10,7 @@ function App() {
     return (
         <Layout>
             <Switch>
-                <Route path={'/game-over'} exact component={GameOver}/>
+                <Route path={'/game-over'} component={GameOver}/>
                 <Route path={'/game'} component={Game}/>
                 <Route path={'/'} component={GameStart}/>
                 <Redirect to={'/'} />

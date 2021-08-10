@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1248px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gamePlace {
+    background: #D0D0D8;
+}
+
+.scorePlace {
+    background: #FFFFFF;
+}

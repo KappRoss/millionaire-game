@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import Button from "../../components/Button";
 
 const GameStart: FC = () => {
-
     return (
         <div className={s.mainContainer}>
             <div className={s.handImageBlock}/>
