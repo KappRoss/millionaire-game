@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import s from './gameStart.module.css'
 import {NavLink} from "react-router-dom";
+import Button from "../../components/Button";
 
 const GameStart: FC = () => {
 
@@ -8,8 +9,12 @@ const GameStart: FC = () => {
         <div className={s.mainContainer}>
             <div className={s.handImageBlock}/>
             <div className={s.infoBlock}>
-                <p>Who wants to be a millionaire?</p>
-                <NavLink to={'/game'}>Start</NavLink>
+                <div className={s.contentWrapper}>
+                    <p>Who wants to be a millionaire?</p>
+                    <NavLink className={s.startButton} to={'/game'}>
+                        <Button>Start</Button>
+                    </NavLink>
+                </div>
             </div>
         </div>
     )
