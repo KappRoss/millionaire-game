@@ -2,7 +2,7 @@ export default
 {
   "questions": [
     {
-      "question": "who created the javascript language?",
+      "question": "Who created the javascript language?",
       "id": 1,
       "rightAnswerId": 1,
       "answers": [
@@ -25,8 +25,8 @@ export default
       ]
     },
     {
-      "question": "when is Ukraine's Independence Day celebrated?",
-      "id": 1,
+      "question": "When is Ukraine's Independence Day celebrated?",
+      "id": 2,
       "rightAnswerId": 4,
       "answers": [
         {
@@ -47,23 +47,51 @@ export default
         }
       ]
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {}
-  ],
-  "boolean": true,
-  "color": "gold",
-  "null": null,
-  "number": 123,
-  "object": {
-    "a": "b",
-    "c": "d"
-  },
-  "string": "Hello World"
+    {
+      "question": "In which hook do you need to download data from the server?",
+      "id": 3,
+      "rightAnswerId": 4,
+      "answers": [
+        {
+          "text": "UseContext",
+          "id": 1
+        },
+        {
+          "text": "UseMemo",
+          "id": 2
+        },
+        {
+          "text": "UseState",
+          "id": 3
+        },
+        {
+          "text": "UseEffect",
+          "id": 4
+        }
+      ]
+    },
+    {
+      "question": "How many legs does a spider have?",
+      "id": 4,
+      "rightAnswerId": 4,
+      "answers": [
+        {
+          "text": "4",
+          "id": 1
+        },
+        {
+          "text": "2",
+          "id": 2
+        },
+        {
+          "text": "6",
+          "id": 3
+        },
+        {
+          "text": "8",
+          "id": 4
+        }
+      ]
+    }
+  ]
 }

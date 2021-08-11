@@ -3,6 +3,7 @@
     justify-content: center;
     max-width: 1248px;
     width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -12,4 +13,5 @@
 
 .scorePlace {
     background: #FFFFFF;
+    width: 376px;
 }
