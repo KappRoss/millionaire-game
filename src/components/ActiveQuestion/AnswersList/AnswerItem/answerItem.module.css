@@ -1,0 +1,19 @@
+.container {
+    padding: 20px;
+    border: 1px solid black;
+    margin: 40px;
+    cursor: pointer;
+    background: green;
+    position: relative;
+}
+.container::before {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 0;
+    top: -35px;
+    border-bottom: 35px solid black;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}

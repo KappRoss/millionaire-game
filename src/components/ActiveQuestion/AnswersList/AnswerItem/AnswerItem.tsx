@@ -1,4 +1,5 @@
 import React, {FC} from "react";
+import s from './answerItem.module.css'
 
 interface AIProps {
     answer: any,
@@ -7,7 +8,10 @@ interface AIProps {
 
 const AnswerItem: FC<AIProps> = ({answer, onAnswerClick}) => {
     return (
-        <div onClick={() => onAnswerClick(answer.id)} >
+        <div
+            className={s.container}
+            onClick={() => onAnswerClick(answer.id)}
+        >
             <p>{answer.text}</p>
         </div>
     )
