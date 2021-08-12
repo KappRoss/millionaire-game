@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import s from "./answersList.module.css"
-import {Quiz} from "../../../pages/game/quiz";
+import {Quiz} from "../../../quiz";
 import AnswerItem from "./AnswerItem";
 
 // export interface Data {

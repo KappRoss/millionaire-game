@@ -8,14 +8,16 @@ import GameOver from "./pages/gameOver";
 
 function App() {
     return (
-        <Layout>
-            <Switch>
-                <Route path={'/game-over'} component={GameOver}/>
-                <Route path={'/game'} component={Game}/>
-                <Route path={'/'} component={GameStart}/>
-                <Redirect to={'/'} />
-            </Switch>
-        </Layout>
+        <div style={{background: '#F5F5F7'}}>
+            <Layout>1
+                <Switch>
+                    <Route path={'/game-over'} component={GameOver}/>
+                    <Route path={'/game'} component={Game}/>
+                    <Route path={'/'} component={GameStart}/>
+                    <Redirect to={'/'}/>
+                </Switch>
+            </Layout>
+        </div>
     );
 }
 

@@ -1,0 +1,32 @@
+.container {
+    cursor: pointer;
+    position: relative;
+}
+
+.buttonSvg {
+    position: relative;
+    display: flex;
+    width: 100%;
+    /*justify-content: center;*/
+    /*margin-left: 50px;*/
+}
+
+.container:nth-child(1n) .buttonSvg {
+    justify-content: flex-end;
+}
+.container:nth-child(2n) .buttonSvg {
+    justify-content: flex-start;
+}
+
+.container p {
+    position: absolute;
+    padding-left: 30%;
+    margin: 0;
+    z-index: 2;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+

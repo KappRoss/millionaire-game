@@ -1,11 +1,9 @@
 .container {
-    height: 50%;
-    /*background: red;*/
+    height: 19%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-
+    margin: 15% auto;
     justify-content: center;
     align-items: center;
-
 }

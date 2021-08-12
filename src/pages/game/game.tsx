@@ -2,8 +2,8 @@ import React, {FC, useEffect, useState} from "react";
 import s from './game.module.css'
 import questions from '../../data'
 import {useHistory} from "react-router-dom";
-import ActiveQuestion from "../../components/ActiveQuestion";
-import ScoreDashboard from "../../components/ScoreDashboard";
+import ActiveQuestion from "./components/ActiveQuestion";
+import ScoreDashboard from "./components/ScoreDashboard";
 
 const Game: FC = () => {
     const {questions: data} = questions

@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import s from './ActiveQuestion.module.css'
-import {Quiz} from '../../pages/game/quiz';
+import {Quiz} from '../../quiz';
 import AnswersList from "./AnswersList";
 
 interface AQProps {
