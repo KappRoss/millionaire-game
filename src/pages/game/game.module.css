@@ -15,4 +15,5 @@
 .scorePlace {
     background: #FFFFFF;
     width: 376px;
+    border-right: 2px solid #F5F5F7;
 }

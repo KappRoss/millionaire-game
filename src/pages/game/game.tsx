@@ -5,6 +5,8 @@ import {useHistory} from "react-router-dom";
 import ActiveQuestion from "./components/ActiveQuestion";
 import ScoreDashboard from "./components/ScoreDashboard";
 
+// @ts-ignore
+
 const Game: FC = () => {
     const {questions: data} = questions
     const history = useHistory()

@@ -14,7 +14,6 @@ interface ALProps {
 }
 
 const AnswersList: FC<ALProps> = ({answers , onAnswerClick}) => {
-
     return (
         <div className={s.container}>
             {answers.map((answer, index) => (

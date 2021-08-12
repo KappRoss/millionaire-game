@@ -23,14 +23,14 @@ const ScoreDashboard: FC<SDProps> = ({score}) => {
                         color = 'black'
                     }
 
-                    return <div className={s.item}>
+                    return <div className={s.item} key={item}>
                         <div
                             className={s.itemValue}
                             style={{
                                 textAlign: "center",
                                 color: color
                             }}
-                            key={item}>
+                        >
                             {item}
                         </div>
                         <div className={s.button}>

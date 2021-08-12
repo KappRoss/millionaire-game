@@ -7,20 +7,23 @@
     position: relative;
     display: flex;
     width: 100%;
-    /*justify-content: center;*/
-    /*margin-left: 50px;*/
+}
+
+.buttonSvg:hover {
+    color: #FF8B37
 }
 
 .container:nth-child(1n) .buttonSvg {
     justify-content: flex-end;
 }
+
 .container:nth-child(2n) .buttonSvg {
     justify-content: flex-start;
 }
 
 .container p {
     position: absolute;
-    padding-left: 30%;
+    padding-left: 11%;
     margin: 0;
     z-index: 2;
     display: flex;
@@ -28,5 +31,28 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.container span {
+    position: absolute;
+    z-index: 3;
+    color: #FF8B37;
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+
+
 }
 
