@@ -4,7 +4,7 @@ import questions from '../../data'
 import {useHistory} from "react-router-dom";
 import ActiveQuestion from "./components/ActiveQuestion";
 import ScoreDashboard from "./components/ScoreDashboard";
-
+import {buttonStyle, Context} from '../../data/context'
 // @ts-ignore
 
 const Game: FC = () => {
@@ -13,7 +13,11 @@ const Game: FC = () => {
     const [state, setState] = useState({
         isFinished: false,
         activeQuestion: 0,
-        score: 11
+        score: 11,
+        answerStyle: {
+            borerColor: 'grey',
+            background: 'white'
+        }
     })
 
     useEffect(() => {
@@ -31,7 +35,11 @@ const Game: FC = () => {
                     setState({
                         ...state,
                         activeQuestion: state.activeQuestion + 1,
-                        score: state.score - 1
+                        score: state.score - 1,
+                        answerStyle: {
+                            borerColor: '#47D867',
+                            background: '#E6FAEA'
+                        }
                     })
                 }
                 window.clearTimeout(timeout)
@@ -50,10 +58,12 @@ const Game: FC = () => {
     return (
         <div className={s.container}>
             <div className={s.gamePlace}>
-                <ActiveQuestion
-                    data={data[state.activeQuestion]}
-                    onAnswerClick={onAnswerClickHandler}
-                />
+                <Context.Provider value={state.answerStyle}>
+                    <ActiveQuestion
+                        data={data[state.activeQuestion]}
+                        onAnswerClick={onAnswerClickHandler}
+                    />
+                </Context.Provider>
             </div>
             <div className={s.scorePlace}>
                 <ScoreDashboard score={state.score}/>

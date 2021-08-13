@@ -17,3 +17,9 @@
     width: 376px;
     border-right: 2px solid #F5F5F7;
 }
+
+@media screen and (max-width: 1366px) {
+    .container {
+        height: 100vh;
+    }
+}

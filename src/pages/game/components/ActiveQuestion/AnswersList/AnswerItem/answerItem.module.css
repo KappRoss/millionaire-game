@@ -23,7 +23,7 @@
 
 .container p {
     position: absolute;
-    padding-left: 11%;
+    /*padding-left: 23%;*/
     margin: 0;
     z-index: 2;
     display: flex;
@@ -38,8 +38,17 @@
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
-
 }
+
+
+.container:nth-child(1n) p {
+    padding-left: 23%;
+}
+
+.container:nth-child(2n) p {
+    padding-left: 9%;
+}
+
 
 .container span {
     position: absolute;
@@ -52,7 +61,5 @@
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
-
-
 }
 

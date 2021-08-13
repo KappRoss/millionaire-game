@@ -32,3 +32,12 @@
 .button {
     position: relative;
 }
+
+@media screen and (max-width: 1366px) {
+    .item {
+        margin-bottom: 1px;
+    }
+    .container {
+        /*height: 100vh;*/
+    }
+}
