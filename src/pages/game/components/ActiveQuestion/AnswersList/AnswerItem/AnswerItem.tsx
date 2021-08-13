@@ -1,18 +1,16 @@
-import React, {FC, useContext, useState} from "react";
+import React, {FC, useState} from "react";
 import s from './answerItem.module.css'
 import ButtonImg from "../../../../../../images/button";
-import {Context} from "../../../../../../data/context";
 
 interface AIProps {
-    answer: any,
+    answer: any
     onAnswerClick: any
+    answerStyle: any
 }
 
-const AnswerItem: FC<AIProps> = ({answer, onAnswerClick}) => {
-
+const AnswerItem: FC<AIProps> = ({answer, onAnswerClick, answerStyle}) => {
     const [hoverColor, setHoverColor] = useState<string | undefined>(undefined)
-    const {borerColor, background} = useContext(Context)
-    console.log(borerColor, background)
+    const option = ['A','B','C','D']
     return (
         <div
             className={s.container}
@@ -21,10 +19,13 @@ const AnswerItem: FC<AIProps> = ({answer, onAnswerClick}) => {
             onMouseLeave={() => setHoverColor(undefined)}
         >
             <p>
-                <span>{answer.option}</span>&nbsp;&nbsp;&nbsp; {answer.text}
+                <span>{option[answer.id - 1]}</span>&nbsp;&nbsp;&nbsp; {answer.text}
             </p>
             <div className={s.buttonSvg}>
-                <ButtonImg borderColor={hoverColor || borerColor} background={background}/>
+                <ButtonImg
+                    borderColor={ answerStyle?.borderColor || hoverColor ||'#D0D0D8'}
+                    background={ answerStyle?.background || '#FFFFFF'}
+                />
             </div>
         </div>
     )

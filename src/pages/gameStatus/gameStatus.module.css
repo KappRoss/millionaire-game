@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-.mainContainer{
+.mainContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,6 +11,19 @@
     width: 100%;
     margin: 0 auto;
 }
+
+.gameOverContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .mainContainer::after {
     content: '';
     width: 100%;
@@ -19,14 +32,15 @@
     background: linear-gradient(to right bottom, transparent 50%, #FFF3EB 50%);
     z-index: -1;
 }
-.handImageBlock{
+
+.handImageBlock {
     background: url("../../images/hand.svg") no-repeat center;
     height: 367px;
     width: 100%;
     max-width: 624px;
 }
 
-.infoBlock{
+.infoBlock {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,8 +60,22 @@
     max-width: 455px;
     margin: 25px 0 64px 0;
 }
-.contentWrapper{
+
+.contentWrapper {
     display: flex;
     flex-direction: column;
+}
+
+.contentWrapper .totalScore {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1C1C21;
+    opacity: 0.5;
+    margin: 0;
 }
 

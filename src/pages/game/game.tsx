@@ -4,20 +4,18 @@ import questions from '../../data'
 import {useHistory} from "react-router-dom";
 import ActiveQuestion from "./components/ActiveQuestion";
 import ScoreDashboard from "./components/ScoreDashboard";
-import {buttonStyle, Context} from '../../data/context'
-// @ts-ignore
+import useTotalScore from "../../hooks/useTotalScore";
 
 const Game: FC = () => {
     const {questions: data} = questions
+
     const history = useHistory()
+    const [total, setIndex] = useTotalScore()
     const [state, setState] = useState({
         isFinished: false,
         activeQuestion: 0,
         score: 11,
-        answerStyle: {
-            borerColor: 'grey',
-            background: 'white'
-        }
+        answerStyle: null //[id]: {borderColor: '#D0D0D8', background: '#FFFFFF'}
     })
 
     useEffect(() => {
@@ -26,8 +24,19 @@ const Game: FC = () => {
 
     const onAnswerClickHandler = (answerId: number) => {
         const question = data[state.activeQuestion]
+        // @ts-ignore
+        setIndex(state.score)
 
         if (question.rightAnswerId === answerId) {
+
+            setState({
+                ...state,
+                // @ts-ignore
+                answerStyle: {
+                    [answerId]: {borderColor: '#47D867', background: '#E6FAEA'}
+                }
+            })
+
             const timeout = window.setTimeout(() => {
                 if (isGameOver()) {
                     history.push('/game-over')
@@ -36,15 +45,20 @@ const Game: FC = () => {
                         ...state,
                         activeQuestion: state.activeQuestion + 1,
                         score: state.score - 1,
-                        answerStyle: {
-                            borerColor: '#47D867',
-                            background: '#E6FAEA'
-                        }
                     })
+
                 }
                 window.clearTimeout(timeout)
             }, 500)
+
         } else {
+            setState({
+                ...state,
+                // @ts-ignore
+                answerStyle: {
+                    [answerId]: {borderColor: '#EC6259', background: '#FDEEED'}
+                }
+            })
             const timeout = window.setTimeout(() => {
                 history.push('/game-over')
                 window.clearTimeout(timeout)
@@ -58,15 +72,17 @@ const Game: FC = () => {
     return (
         <div className={s.container}>
             <div className={s.gamePlace}>
-                <Context.Provider value={state.answerStyle}>
-                    <ActiveQuestion
-                        data={data[state.activeQuestion]}
-                        onAnswerClick={onAnswerClickHandler}
-                    />
-                </Context.Provider>
+                <ActiveQuestion
+                    data={data[state.activeQuestion]}
+                    onAnswerClick={onAnswerClickHandler}
+                    answerStyle={state.answerStyle}
+                />
             </div>
             <div className={s.scorePlace}>
-                <ScoreDashboard score={state.score}/>
+                {/*<Context.Provider value={state.score}>*/}
+                    <ScoreDashboard score={state.score}/>
+                {/*</Context.Provider>*/}
+
             </div>
         </div>
     )
