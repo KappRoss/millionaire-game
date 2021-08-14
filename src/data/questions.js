@@ -9,22 +9,18 @@ export default
         {
           "text": "Brendan Eich",
           "id": 1,
-          "option": "A"
         },
         {
           "text": "Rasmus Lerdorf",
           "id": 2,
-          "option": "B"
         },
         {
           "text": "James Gosling",
           "id": 3,
-          "option": "C"
         },
         {
           "text": "Bjarne Stroustrup",
           "id": 4,
-          "option": "D"
         }
       ]
     },

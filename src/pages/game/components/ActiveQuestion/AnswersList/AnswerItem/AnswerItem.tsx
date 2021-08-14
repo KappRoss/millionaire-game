@@ -3,14 +3,26 @@ import s from './answerItem.module.css'
 import ButtonImg from "../../../../../../images/button";
 
 interface AIProps {
-    answer: any
-    onAnswerClick: any
-    answerStyle: any
+    answer: {
+        text: string
+        id: number
+    }
+    onAnswerClick: (answerId: number) => void
+    answerStyle: null | {
+        borderColor: string
+        background: string
+    }
 }
 
-const AnswerItem: FC<AIProps> = ({answer, onAnswerClick, answerStyle}) => {
+const AnswerItem: FC<AIProps> = ({
+                                     answer,
+                                     onAnswerClick,
+                                     answerStyle
+                                 }) => {
+
     const [hoverColor, setHoverColor] = useState<string | undefined>(undefined)
-    const option = ['A','B','C','D']
+    const option = ['A', 'B', 'C', 'D']
+
     return (
         <div
             className={s.container}
@@ -23,8 +35,8 @@ const AnswerItem: FC<AIProps> = ({answer, onAnswerClick, answerStyle}) => {
             </p>
             <div className={s.buttonSvg}>
                 <ButtonImg
-                    borderColor={ answerStyle?.borderColor || hoverColor ||'#D0D0D8'}
-                    background={ answerStyle?.background || '#FFFFFF'}
+                    borderColor={answerStyle?.borderColor || hoverColor || '#D0D0D8'}
+                    background={answerStyle?.background || '#FFFFFF'}
                 />
             </div>
         </div>

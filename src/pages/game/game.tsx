@@ -5,13 +5,14 @@ import {useHistory} from "react-router-dom";
 import ActiveQuestion from "./components/ActiveQuestion";
 import ScoreDashboard from "./components/ScoreDashboard";
 import useTotalScore from "../../hooks/useTotalScore";
+import {GameState} from "../../types";
 
 const Game: FC = () => {
     const {questions: data} = questions
 
     const history = useHistory()
-    const [total, setIndex] = useTotalScore()
-    const [state, setState] = useState({
+    const [setIndex] = useTotalScore()
+    const [state, setState] = useState<GameState>({
         isFinished: false,
         activeQuestion: 0,
         score: 11,
@@ -25,13 +26,12 @@ const Game: FC = () => {
     const onAnswerClickHandler = (answerId: number) => {
         const question = data[state.activeQuestion]
         // @ts-ignore
-        setIndex(state.score)
+        setIndex(state.score);
 
         if (question.rightAnswerId === answerId) {
 
             setState({
                 ...state,
-                // @ts-ignore
                 answerStyle: {
                     [answerId]: {borderColor: '#47D867', background: '#E6FAEA'}
                 }
@@ -54,7 +54,6 @@ const Game: FC = () => {
         } else {
             setState({
                 ...state,
-                // @ts-ignore
                 answerStyle: {
                     [answerId]: {borderColor: '#EC6259', background: '#FDEEED'}
                 }
@@ -79,10 +78,7 @@ const Game: FC = () => {
                 />
             </div>
             <div className={s.scorePlace}>
-                {/*<Context.Provider value={state.score}>*/}
-                    <ScoreDashboard score={state.score}/>
-                {/*</Context.Provider>*/}
-
+                <ScoreDashboard score={state.score}/>
             </div>
         </div>
     )
