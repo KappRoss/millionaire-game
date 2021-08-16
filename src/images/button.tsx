@@ -6,7 +6,7 @@ interface BIProps {
 }
 
 const ButtonImg: FC<BIProps> = ({borderColor, background}) => (
-    <svg width="373" height="72" viewBox="0 0 405 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="100%" height="100%" viewBox="0 0 405 72" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M388 36L405 36" stroke={borderColor}/>
         <path d="M0 36L17 36" stroke={borderColor}/>
         <path

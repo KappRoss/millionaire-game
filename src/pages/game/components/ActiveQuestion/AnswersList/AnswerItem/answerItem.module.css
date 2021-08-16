@@ -1,12 +1,20 @@
 .container {
     cursor: pointer;
     position: relative;
+    margin-bottom: 15px;
+    outline: none;
+
 }
 
 .buttonSvg {
     position: relative;
     display: flex;
     width: 100%;
+    outline: none;
+}
+
+.buttonSvg svg , p{
+    outline: none;
 }
 
 .buttonSvg:hover {
@@ -23,11 +31,9 @@
 
 .container p {
     position: absolute;
-    /*padding-left: 23%;*/
     margin: 0;
     z-index: 2;
     display: flex;
-    /*justify-content: center;*/
     align-items: center;
     height: 100%;
     width: 100%;
@@ -40,15 +46,9 @@
     text-align: left;
 }
 
-
-.container:nth-child(1n) p {
-    padding-left: 23%;
+.container p {
+    padding-left: 11%;
 }
-
-.container:nth-child(2n) p {
-    padding-left: 9%;
-}
-
 
 .container span {
     position: absolute;
@@ -61,5 +61,11 @@
     line-height: 23px;
     letter-spacing: 0em;
     text-align: left;
+}
+@media screen and (max-width: 600px) {
+    .container {
+        margin-bottom: 8px;
+        width: 100%;
+    }
 }
 

@@ -79,3 +79,43 @@
     margin: 0;
 }
 
+@media screen and (max-width: 1200px){
+    .startButton {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin: 100px 16px 48px 16px;
+    }
+    .infoBlock p {
+        margin: 0 16px;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 37px;
+        letter-spacing: 0em;
+        text-align: center;
+
+    }
+    .handImageBlock {
+        height: 50%;
+    }
+    .mainContainer {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .contentWrapper .totalScore {
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: 0em;
+        margin-bottom: 8px;
+    }
+    .gameOverContainer {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}
+
+

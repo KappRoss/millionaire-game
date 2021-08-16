@@ -15,7 +15,7 @@ const Game: FC = () => {
     const [state, setState] = useState<GameState>({
         isFinished: false,
         activeQuestion: 0,
-        score: 11,
+        score: data.length - 1,
         answerStyle: null //[id]: {borderColor: '#D0D0D8', background: '#FFFFFF'}
     })
 
@@ -27,7 +27,7 @@ const Game: FC = () => {
         const question = data[state.activeQuestion]
         // @ts-ignore
         setIndex(state.score);
-
+console.log(state.score)
         if (question.rightAnswerId === answerId) {
 
             setState({
@@ -65,8 +65,7 @@ const Game: FC = () => {
         }
     }
 
-    // 12 or question.length
-    const isGameOver = () => state.activeQuestion + 1 === 4
+    const isGameOver = () => state.activeQuestion + 1 === data.length
 
     return (
         <div className={s.container}>
