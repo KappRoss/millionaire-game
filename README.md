@@ -1,4 +1,4 @@
-gh-page: https://kappross.github.io/millionaire-game/#/game
+gh-page: https://kappross.github.io/millionaire-game/#/
 
 # Getting Started with Create React App
 
