@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/millionaire-game/static/css/main.34f6342d.chunk.css",
-    "main.js": "/millionaire-game/static/js/main.8c0fbccb.chunk.js",
-    "main.js.map": "/millionaire-game/static/js/main.8c0fbccb.chunk.js.map",
-    "runtime-main.js": "/millionaire-game/static/js/runtime-main.73e4e6ae.js",
-    "runtime-main.js.map": "/millionaire-game/static/js/runtime-main.73e4e6ae.js.map",
-    "static/js/2.ebe4a84d.chunk.js": "/millionaire-game/static/js/2.ebe4a84d.chunk.js",
-    "static/js/2.ebe4a84d.chunk.js.map": "/millionaire-game/static/js/2.ebe4a84d.chunk.js.map",
-    "static/js/3.f00f6e08.chunk.js": "/millionaire-game/static/js/3.f00f6e08.chunk.js",
-    "static/js/3.f00f6e08.chunk.js.map": "/millionaire-game/static/js/3.f00f6e08.chunk.js.map",
+    "main.css": "/millionaire-game/static/css/main.613f5aac.chunk.css",
+    "main.js": "/millionaire-game/static/js/main.7e6828eb.chunk.js",
+    "main.js.map": "/millionaire-game/static/js/main.7e6828eb.chunk.js.map",
+    "runtime-main.js": "/millionaire-game/static/js/runtime-main.3c91b84a.js",
+    "runtime-main.js.map": "/millionaire-game/static/js/runtime-main.3c91b84a.js.map",
+    "static/js/2.31d2d557.chunk.js": "/millionaire-game/static/js/2.31d2d557.chunk.js",
+    "static/js/2.31d2d557.chunk.js.map": "/millionaire-game/static/js/2.31d2d557.chunk.js.map",
+    "static/js/3.1e94902b.chunk.js": "/millionaire-game/static/js/3.1e94902b.chunk.js",
+    "static/js/3.1e94902b.chunk.js.map": "/millionaire-game/static/js/3.1e94902b.chunk.js.map",
     "index.html": "/millionaire-game/index.html",
-    "static/css/main.34f6342d.chunk.css.map": "/millionaire-game/static/css/main.34f6342d.chunk.css.map",
-    "static/js/2.ebe4a84d.chunk.js.LICENSE.txt": "/millionaire-game/static/js/2.ebe4a84d.chunk.js.LICENSE.txt",
+    "static/css/main.613f5aac.chunk.css.map": "/millionaire-game/static/css/main.613f5aac.chunk.css.map",
+    "static/js/2.31d2d557.chunk.js.LICENSE.txt": "/millionaire-game/static/js/2.31d2d557.chunk.js.LICENSE.txt",
     "static/media/gameStatus.module.css": "/millionaire-game/static/media/hand.1bae52bd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.73e4e6ae.js",
-    "static/js/2.ebe4a84d.chunk.js",
-    "static/css/main.34f6342d.chunk.css",
-    "static/js/main.8c0fbccb.chunk.js"
+    "static/js/runtime-main.3c91b84a.js",
+    "static/js/2.31d2d557.chunk.js",
+    "static/css/main.613f5aac.chunk.css",
+    "static/js/main.7e6828eb.chunk.js"
   ]
 }
