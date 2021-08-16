@@ -23,12 +23,18 @@ const AnswerItem: FC<AIProps> = ({
     const [hoverColor, setHoverColor] = useState<string | undefined>(undefined)
     const option = ['A', 'B', 'C', 'D']
 
+    const touchHandler = () => {
+        setHoverColor('#FF8B37')
+        setTimeout( () =>setHoverColor(undefined), 500)
+    }
+
     return (
         <div
             className={s.container}
             onClick={() => onAnswerClick(answer.id)}
             onMouseEnter={() => setHoverColor('#FF8B37')}
             onMouseLeave={() => setHoverColor(undefined)}
+            onTouchStart={touchHandler}
         >
             <p>
                 <span>{option[answer.id - 1]}</span>&nbsp;&nbsp;&nbsp; {answer.text}
