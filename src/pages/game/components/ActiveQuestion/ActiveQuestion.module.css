@@ -10,10 +10,20 @@
     font-weight: 600;
     font-size: 32px;
     line-height: 116%;
+    overflow: auto;
+    width: 300px;
+    height: 189px;
 }
 
 @media screen and (max-width: 600px) {
     .activeQuestion > p {
         margin: 100px 16px 97px 16px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: 0em;
+        text-align: center;
+
     }
 }

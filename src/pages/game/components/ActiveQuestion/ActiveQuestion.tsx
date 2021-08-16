@@ -15,7 +15,7 @@ const ActiveQuestion: FC<AQProps> = ({
                                          answerStyle
                                      }) => (
     <div className={s.activeQuestion}>
-        <p>{data.question}</p>
+        <p >{data.question}</p>
         <AnswersList
             answers={data.answers}
             onAnswerClick={onAnswerClick}
