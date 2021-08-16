@@ -6,6 +6,7 @@ import ActiveQuestion from "./components/ActiveQuestion";
 import ScoreDashboard from "./components/ScoreDashboard";
 import useTotalScore from "../../hooks/useTotalScore";
 import {GameState} from "../../types";
+import moneyAccount from "../../data/moneyAccount";
 
 const Game: FC = () => {
     const {questions: data} = questions
@@ -26,10 +27,9 @@ const Game: FC = () => {
     const onAnswerClickHandler = (answerId: number) => {
         const question = data[state.activeQuestion]
         // @ts-ignore
-        setIndex(state.score);
-console.log(state.score)
-        if (question.rightAnswerId === answerId) {
+        setIndex(state.score)
 
+        if (question.rightAnswerId === answerId) {
             setState({
                 ...state,
                 answerStyle: {
@@ -39,6 +39,8 @@ console.log(state.score)
 
             const timeout = window.setTimeout(() => {
                 if (isGameOver()) {
+                    const maxScore = moneyAccount.money[0]
+                    sessionStorage.setItem('totalScore', maxScore)
                     history.push('/game-over')
                 } else {
                     setState({
